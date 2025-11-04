@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --etec-blue: #003366;
+  --etec-red: #C8102E;
+  --etec-teal: #006B7D;
+  --etec-light-gray: #F5F5F5;
+  --etec-medium-gray: #CCCCCC;
+  --etec-dark-gray: #666666;
+  --etec-white: #FFFFFF;
+  --etec-black: #000000;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--etec-light-gray);
+  color: var(--etec-black);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+

@@ -1,0 +1,267 @@
+.admin-dashboard {
+  width: 100%;
+}
+
+.page-title {
+  background-color: var(--etec-light-gray);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.page-title h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--etec-black);
+  margin: 0;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--etec-medium-gray);
+}
+
+.tab-button {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--etec-dark-gray);
+  transition: all 0.2s;
+  margin-bottom: -2px;
+}
+
+.tab-button:hover {
+  color: var(--etec-teal);
+}
+
+.tab-button.active {
+  color: var(--etec-teal);
+  border-bottom-color: var(--etec-teal);
+}
+
+.admin-content {
+  background-color: var(--etec-white);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  color: var(--etec-black);
+}
+
+.users-table {
+  overflow-x: auto;
+}
+
+.users-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--etec-medium-gray);
+}
+
+.users-table th {
+  background-color: var(--etec-light-gray);
+  font-weight: 600;
+  color: var(--etec-black);
+}
+
+.role-badge,
+.status-badge,
+.category-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status-badge.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.role-badge {
+  background-color: var(--etec-light-gray);
+  color: var(--etec-dark-gray);
+}
+
+.category-badge {
+  background-color: var(--etec-teal);
+  color: var(--etec-white);
+}
+
+.btn-action {
+  padding: 0.5rem 1rem;
+  background-color: var(--etec-teal);
+  color: var(--etec-white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.btn-action:hover {
+  background-color: #005a6b;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.inventory-card {
+  background-color: var(--etec-light-gray);
+  border: 1px solid var(--etec-medium-gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.inventory-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.inventory-card-header h3 {
+  font-size: 1.1rem;
+  color: var(--etec-black);
+  margin: 0;
+}
+
+.inventory-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--etec-dark-gray);
+}
+
+.info-value {
+  color: var(--etec-black);
+}
+
+.info-value.low-stock {
+  color: var(--etec-red);
+  font-weight: 600;
+}
+
+.inventory-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.quantity-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--etec-medium-gray);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.report-card {
+  background-color: var(--etec-light-gray);
+  border: 1px solid var(--etec-medium-gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.report-card h3 {
+  font-size: 1.1rem;
+  color: var(--etec-black);
+  margin: 0;
+}
+
+.report-card p {
+  color: var(--etec-dark-gray);
+  margin: 0;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .admin-tabs {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .tab-button {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid var(--etec-medium-gray);
+    border-left: 3px solid transparent;
+    margin-bottom: 0;
+  }
+
+  .tab-button.active {
+    border-bottom-color: var(--etec-medium-gray);
+    border-left-color: var(--etec-teal);
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .inventory-grid,
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .users-table {
+    font-size: 0.875rem;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 0.5rem;
+  }
+}
+
