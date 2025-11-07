@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar kit</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="imagens/etec-removebg-preview.png" alt="Simbolo etec"
+        width="150px"
+        >
+   </header>
+   
+   <div class="faixaDeCima">
+        <hr>
+   </div>
+   <div class="botaoNomeKit">
+       <input type="text" id="nomeKit" placeholder="Nome do Kit" required>
+   </div>
+   <div class="form-row container-botoes">
+        <select id="tipoItem" class="tipoItem">
+            <option value="">Escolha o tipo do item </option>
+            <option value="vidraria">Vidraria</option>
+            <option value="reagente">Reagente</option>
+            <option value="equipamento">Equipamento</option>
+        </select>
+        <input type="text" id="nomeItem" placeholder="Digite o nome do item" class="nomeItem">
+        <input type="text" id="quantidadeItem" placeholder="Quantidade" class="quantidadeItem">
+    </div>
+    <div class="container-adicionar">
+        <button type="button" onclick="adicionarItem()" class="adicionarItemBotao" >Adicionar item</button>
+
+    </div>
+    
+
+    <div class="faixaDeBaixo">
+     <hr>
+    </div>
+</body>
+</html>

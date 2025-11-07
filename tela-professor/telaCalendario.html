@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/21ec8bac00.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <header class="header">
+        <img src="imagens/etec-removebg-preview.png" alt="Simbolo etec"
+        width="150px"
+        >
+   </header>
+   
+   <div class="faixaDeCima">
+        <hr>
+   </div>
+   <h1 class="calendario-academico">Calendário Acadêmico</h1>
+
+   <main class="bodyCalendario">
+       <div class="calendar">
+            <div class="header">
+                <button id="prevBtn">
+                   <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="month-year" id="monthYear"></div>
+                <button id="nextBtn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="days">
+                <div class="days">Dom</div>
+                <div class="days">Seg</div>
+                <div class="days">Ter</div>
+                <div class="days">Qua</div>
+                <div class="days">Qui</div>
+                <div class="days">Sex</div>
+                <div class="days">Sab</div>
+            </div>
+            <div class="dates" id="dates"></div>
+       </div>
+
+   </main>
+
+
+   <div class="faixaDeBaixo">
+     <hr>
+    </div>
+
+
+
+    <script src="js/backend.js"></script>
+</body>
+</html>

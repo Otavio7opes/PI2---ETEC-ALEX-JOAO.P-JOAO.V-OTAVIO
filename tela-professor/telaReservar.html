@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar laboratório</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <header class="header">
+        <img src="imagens/etec-removebg-preview.png" alt="Simbolo etec"
+        width="150px"
+        >
+   </header>
+   
+   <div class="faixaDeCima">
+        <hr>
+   </div>
+
+   <div class="container">
+        <p class="roboto-slab">Reservar laboratorio</p>
+   </div>
+   <div class="container-botoes botoesReservar">
+        <select id="laboratorio" class="selecionarLaboratorio">
+            <option value="lab1">Laboratório 1</option>
+            <option value="lab2">Laboratório 2</option>
+            <option value="lab3">Laboratório 3</option>
+            <option value="lab4">Laboratório 4</option>
+        </select>
+        <input type="number" placeholder="Digite o dia desejado">
+        <select id="mes" class="selecionarMes">
+            <option value="Jan">Janeiro</option>
+            <option value="Fev">Fevereiro</option>
+            <option value="Mar">Março</option>
+            <option value="Abr">Abril</option>
+            <option value="Mai">Maio</option>
+            <option value="Jun">Junho</option>
+            <option value="Jul">Julho</option>
+            <option value="Ago">Agosto</option>
+            <option value="Set">Setembro</option>
+            <option value="Out">Outubro</option>
+            <option value="Nov">Novembro</option>
+            <option value="Dez">Dezembro</option>
+        </select>
+        <input type="number" id="digitarAno" placeholder="Digite o ano">
+        <button type="button" class="botaoConfirmar">Confirmar</button>
+   </div>
+
+   <div class="faixaDeBaixo">
+     <hr>
+    </div>
+</body>
+</html>
