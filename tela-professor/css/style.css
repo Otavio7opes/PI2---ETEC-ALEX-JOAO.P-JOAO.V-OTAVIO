@@ -1,0 +1,226 @@
+.botaoCalendario {
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px  ;
+    border-radius: 25px;
+    background-color: #efefef;
+}
+
+.botaoReservar {
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px;
+    border-radius: 25px;
+    background-color: #efefef;
+}
+.botaoKits {
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px;
+    border-radius: 25px;
+    background-color: #efefef;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    padding: 150px;
+    align-items: center;
+}
+
+.textoCalendario {
+    padding: 50px;
+    color: #005c6d;
+}
+
+.textoReserva {
+    padding: 50px;
+    color: #005c6d;
+}
+
+.textoKits {
+    padding: 80px;
+    color: #005c6d;
+}
+
+.faixaDeCima {
+    border-top: 25px solid #b20000;
+    margin: 1rem 0;
+}
+
+.faixaDeBaixo {
+    border-bottom: 25px solid #004854;
+}
+
+.container {
+    text-align: center;
+    border: 2px ;
+    width: 10%;
+    margin: 0 auto;
+    padding: 5px 100px 5px 100px;
+    border-radius: 15px;
+    background-color: #efefef;
+    font-family: "Roboto Slab";
+}
+
+
+.roboto-slab{
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  color: black;
+}
+
+.botaoCriar {
+    text-align: center;
+    padding: 20opx;
+}
+
+.botaoNomeKit {
+    text-align: center;
+    border: 2px;
+    background-color: #efefef;
+    padding: 20px ;
+    width: 25%;
+    margin: 20px auto;
+    border-radius: 25px
+}
+
+.container-botoes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tipoItem {
+    background-color: #efefef;
+    border: 1px;
+    border-radius: 6px;
+
+}
+
+.nomeItem {
+    background-color: #efefef;
+    border: 1px;
+    border-radius: 6px;
+}
+
+.quantidadeItem {
+    background-color: #efefef;
+    border: 1px;
+    border-radius: 6px;
+}
+
+.adicionarItemBotao {
+    background-color: #b20000;
+    border: 1px;
+    border-radius: 6px;
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
+    
+}
+
+.container-adicionar {
+    display: flex;
+    align-items: center;
+     
+}
+
+.bodyCalendario {
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.calendar {
+    width: 480px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0,.3);
+    border: 2px solid black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    text-align: center;
+    padding: 5px;
+    color: black;
+    font-weight: 500;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+}
+
+.date:hover, .date.active {
+    background-color: #b20000;
+    color: white;
+}
+
+.date.inactive {
+    color: #efefef;
+}
+
+.date.inactive:hover {
+    color: white;
+}
+
+.calendario-academico {
+    text-align: center;
+
+}
+
+.botoesReservar {
+    border: 1px solid black;
+    padding: 10px;
+}
