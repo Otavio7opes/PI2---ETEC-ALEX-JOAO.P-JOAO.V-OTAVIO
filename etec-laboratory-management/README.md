@@ -1,1 +1,0 @@
-# etec-laboratory-management 
