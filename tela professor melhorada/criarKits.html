@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Novo Kit</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/telas.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logos">
+                    <img src="imagens/etec-removebg-preview.png" alt="ETEC" class="logo-img" style="max-height: 50px;">
+                </div>
+                <div class="user-menu">
+                    <a href="telaKits.html">
+                        <button class="btn-secondary">
+                            <i data-lucide="arrow-left"></i> Voltar
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+    <div class="header-bar"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Configurar Kit</h1>
+                <p class="page-subtitle">Adicione materiais para compor um novo kit de aula</p>
+            </div>
+
+            <div class="modal-content" style="margin: 0 auto; max-width: 800px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                
+                <div class="form-group">
+                    <label for="nomeKit">Nome do Kit</label>
+                    <input type="text" id="nomeKit" class="form-control" placeholder="Ex: Titulação Ácido-Base" required>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+                <div style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #004854; margin-bottom: 15px; font-size: 1.1rem;">Adicionar Material</h3>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 15px; align-items: end;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label style="font-size: 0.9rem;">Tipo</label>
+                            <select id="tipoItem" class="form-control">
+                                <option value="">Selecione...</option>
+                                <option value="Vidraria">Vidraria</option>
+                                <option value="Reagente">Reagente</option>
+                                <option value="Equipamento">Equipamento</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label style="font-size: 0.9rem;">Nome do Item</label>
+                            <input type="text" id="nomeItem" class="form-control" placeholder="Ex: Béquer 50ml">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label style="font-size: 0.9rem;">Qtd</label>
+                            <div class="quantidade-control" style="justify-content: flex-start;">
+                                <input type="number" id="quantidadeItem" class="form-control" style="width: 80px;" placeholder="0">
+                                <button type="button" id="btnAdicionarItem" class="btn-primary" style="border-radius: 50%; width: 40px; height: 40px; padding: 0;">
+                                    <i data-lucide="plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-lista-itens" style="width: 100%; box-shadow: none; padding: 0;">
+                    <h3 style="color: #333; margin-bottom: 10px; font-size: 1.1rem;">Itens no Kit:</h3>
+                    <ul id="listaItensTemporarios" style="list-style: none; padding: 0;">
+                        </ul>
+                    <p id="emptyState" style="color: #999; font-style: italic; padding: 10px 0;">Nenhum item adicionado ainda.</p>
+                </div>
+
+                <div class="modal-actions" style="margin-top: 30px;">
+                    <a href="telaKits.html" style="text-decoration: none;">
+                        <button type="button" class="btn-secondary">Cancelar</button>
+                    </a>
+                    <button type="button" id="btnSalvarKit" class="btn-primary">
+                        <i data-lucide="save"></i> Salvar Kit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/kits.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

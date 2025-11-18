@@ -1,0 +1,500 @@
+/* --- Reset e Fontes --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    background-color: white;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header e Faixas (Identidade Visual ETEC) --- */
+.header {
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-img {
+    height: 60px; /* Ajuste conforme necessário */
+    width: auto;
+}
+
+/* Faixa vermelha grossa no topo (Igual telaCalendario) */
+.header-bar {
+    border-top: 25px solid #b20000;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #004854;
+}
+
+/* --- Estilização dos BOTÕES (O pedido principal) --- */
+
+/* Estilo Base para Botões */
+button {
+    font-family: "Roboto Slab", serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Botão Sair (Estilo parecido com Adicionar Item - Vermelho) */
+.btn-logout {
+    background-color: #b20000;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-logout:hover {
+    background-color: #8f0000;
+}
+
+/* Botão Primário (Estilo Salvar Kit - Azul Petróleo) */
+.btn-primary {
+    background-color: #004854;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+    background-color: #005c6d;
+    transform: translateY(-1px);
+}
+
+/* Botão Secundário (Cancelar - Cinza Claro) */
+.btn-secondary {
+    background-color: #efefef;
+    color: #333;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Botão Grande (Ajustar Estoque) */
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Botões de Quantidade (+ e -) */
+.btn-quantidade {
+    background-color: #efefef;
+    color: #333;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Bolinha */
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.btn-quantidade:hover {
+    background-color: #dcdcdc;
+    color: #b20000;
+}
+
+/* --- Conteúdo Principal --- */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    color: #b20000;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    color: #666;
+    font-weight: 300;
+}
+
+.reservations-list {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Cards de Reserva */
+.reservation-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 5px solid #004854; /* Detalhe lateral */
+}
+
+.actions-footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* --- Modais --- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none; /* Controlado via JS */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    z-index: 1001;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-large {
+    max-width: 800px;
+}
+
+.modal-small {
+    max-width: 400px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.modal-title {
+    color: #004854;
+    font-size: 1.5rem;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #b20000;
+}
+
+/* --- Formulários --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Igual input de criar kits */
+    font-family: "Roboto Slab", serif;
+    font-size: 1rem;
+    background-color: #efefef;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #004854;
+    background-color: white;
+}
+
+.quantidade-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+/* --- Ícones Lucide --- */
+[data-lucide] {
+    width: 20px;
+    height: 20px;
+}
+
+/* --- Ajustes da Lista de Estoque --- */
+.estoque-list {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.estoque-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.estoque-info h4 {
+    color: #004854;
+}
+
+/* --- ADICIONAR AO FINAL DO labtech.css --- */
+
+/* Estilo para o Card de Kit (Igual ao Reservation Card, mas com cor diferente) */
+.kit-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 5px solid #b20000; /* Vermelho ETEC para diferenciar das reservas */
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.kit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.kit-titulo {
+    color: #b20000;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-family: "Roboto Slab", serif;
+}
+
+.kit-itens-lista {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Empurra o botão para baixo */
+}
+
+.kit-itens-lista li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+    color: #555;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Botão de Excluir Kit (Estilo Outline Vermelho) */
+.btn-excluir-kit {
+    background-color: white;
+    color: #b20000;
+    border: 1px solid #b20000;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-excluir-kit:hover {
+    background-color: #b20000;
+    color: white;
+}
+
+/* Itens na tela de Criação */
+.item-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.item-lista span {
+    font-size: 1rem;
+    color: #333;
+}
+
+.btn-remover-item {
+    background-color: #ffecec;
+    color: #b20000;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.btn-remover-item:hover {
+    background-color: #b20000;
+    color: white;
+}
+
+/* --- ESTILOS DO DASHBOARD (HOME) --- */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo: cria colunas automaticamente */
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 40px 20px;
+    text-decoration: none; /* Remove sublinhado do link */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    height: 100%;
+}
+
+/* Efeito ao passar o mouse */
+.menu-card:hover {
+    transform: translateY(-10px); /* Sobe um pouquinho */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #004854;
+}
+
+.icon-container {
+    margin-bottom: 20px;
+    /* Círculo decorativo atrás da imagem (opcional) */
+    background-color: #f8f9fa;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.menu-card:hover .icon-container {
+    background-color: #e0f2f1; /* Muda cor do fundo do ícone ao passar o mouse */
+}
+
+.menu-title {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #004854;
+    margin-bottom: 5px;
+}
+
+.menu-desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Ajuste para telas pequenas (celular) */
+@media (max-width: 600px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* Uma coluna só */
+    }
+}
